@@ -28,7 +28,7 @@ int main()
 void compile(){
     printf("gcc program-source-code.c -o executable-file-name\n\n");
     printf("chmod +x yourScript\n\n");
-    printf("cp yourScript /usr/bin/");
+    printf("cp yourScript /usr/bin/\n\n");
     back();
 }
 void create(){
@@ -41,7 +41,7 @@ void create(){
     printf("_________________________________________________\n\n");
     printf("git clone ~/existing/repo ~/new/repo\n\n");
     printf("git clone git://host.org/project.git\n\n");
-    printf("git clone ssh://you@host.org/proj.git");
+    printf("git clone ssh://you@host.org/proj.git\n\n");
     back();
 }
 void show(){
@@ -83,14 +83,14 @@ void branch(){
     printf("git merge branch1\n\n");
     printf("Create branch named $branch based on the HEAD -- git branch $branch\n\n");
     printf("Creat branch $new_branch based on branch $other and switch to it -- git checkout -b $new_branch $other\n\n");
-    printf("Delete branch $branch -- git branch -d $branch");
+    printf("Delete branch $branch -- git branch -d $branch\n\n");
     back();
 }
 
 void update(){
     printf("Fetch latest changes from origin -- git fetch\n\n");
     printf("Pull latest changes from origin -- git pull\n\n");
-    printf("Apply a patch that some(one) sent you -- git am -3 patch.mbox (in case of confict, resolve and use git am --resolved)");
+    printf("Apply a patch that some(one) sent you -- git am -3 patch.mbox (in case of confict, resolve and use git am --resolved)\n\n");
     back();
 }
 
@@ -98,7 +98,7 @@ void publish(){
     printf("Commit all your local changes -- git commit -a\n\n");
     printf("Prepare a patch for other developers -- git format-patch origin\n\n");
     printf("Push changes to origin -- git push\n\n");
-    printf("Mark a version / milestone -- git tag v1.0");
+    printf("Mark a version / milestone -- git tag v1.0\n\n");
     back();
 }
 
@@ -116,7 +116,7 @@ void commands(){
     printf("git fsck\n\n");
     printf("git gc --prune\n\n");
     printf("Search working directory for foo()\n\n");
-    printf("git grep foo()");
+    printf("git grep foo()\n\n");
     back();
 }
 
@@ -134,7 +134,7 @@ void mergeconflicts(){
     printf("After resolving conflicts, merge with");
     printf("_____________________________________\n\n");
     printf("git add $conflicting_file (do for all reserved files)\n\n");
-    printf("git rebase --continue");
+    printf("git rebase --continue\n\n");
     back();
 }
 
@@ -150,7 +150,7 @@ void operation(){
     printf("7: Publish\n\n");
     printf("8: Commands\n\n");
     printf("9: Merge Conflicts\n\n");
-    printf("10: Compiling Programs");
+    printf("10: Compiling Programs\n\n");
     scanf("%d", &op);
 
 
@@ -201,6 +201,7 @@ void operation(){
     }
 }
 void back(){
+  printf("Where do you want to go next?(Enter 11 to exit): ");
   scanf("%d", &op);
 
 
@@ -244,6 +245,10 @@ void back(){
             break;
         case 10:
             compile();
+            printf("\n");
+            break;
+        case 11:
+            EXIT_SUCCESS;
             printf("\n");
             break;
         default:
