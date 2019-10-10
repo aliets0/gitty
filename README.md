@@ -1,4 +1,4 @@
-# gitcheat, a cheatsheet for github
+# gitty, a cheatsheet for github
 This is a program I made mainly for **practice**, and ease of use. It contains git's ***most*** commonly used commands within certain categories.
 
 
